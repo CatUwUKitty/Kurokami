@@ -9,7 +9,7 @@ import venv
 import subprocess
 
 def _venv_req():
-    pip = f"{DIRECTORY}/venv/{'bin' if os.name != "nt" else 'Scripts'}/pip"
+    pip = f"{DIRECTORY}/venv/{'bin' if os.name != 'nt' else 'Scripts'}/pip"
     try:
         subprocess.check_call([pip, "install", "-r", "requirements.txt"],cwd=DIRECTORY)
     except subprocess.CalledProcessError:
